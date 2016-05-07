@@ -1,0 +1,27 @@
+{
+  "name": "koamethodoverride",
+  "version": "1.0.0",
+  "description": "full method override for koajs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeavenDuke/koamethodoverride.git"
+  },
+  "keywords": [
+    "method",
+    "override",
+    "koa"
+  ],
+  "author": "HeavenDuke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeavenDuke/koamethodoverride/issues"
+  },
+  "homepage": "https://github.com/HeavenDuke/koamethodoverride#readme",
+  "dependencies": {
+    "methods": "^1.1.2"
+  }
+}
