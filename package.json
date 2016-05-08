@@ -4,7 +4,7 @@
   "description": "full method override for koajs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --harmony"
   },
   "repository": {
     "type": "git",
