@@ -67,7 +67,7 @@ If the override method from a higher priority level exists but the value is not 
 *   PATCH
 *   DELETE
 
-then the middleware will search for lower level override methods, if such don't exist or all go wrong, then the middleware will simply use the original method and will raise exception.
+then the middleware will search for lower level override methods, if such don't exist or all go wrong, then the middleware will simply use the original method and will not raise exception.
 
 # License
 [MIT](./LICENSE)
