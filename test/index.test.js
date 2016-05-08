@@ -8,7 +8,7 @@ var request = require('supertest');
 var bodyParser = require('koa-bodyparser');
 var override = require('../');
 
-describe('koa method override middleware', function () {
+describe('koa method override middleware for koa 2.0', function () {
 
     it('should override nothing', function (done) {
         var server = koa();
