@@ -20,8 +20,8 @@ npm install koamethodoverride
 
 # Dependencies
 
-Koa 2(Node >= 0.12.0)[https://github.com/koajs/koa]
-koa-bodyparser[https://github.com/koajs/bodyparser]
+[Koa 2(Node >= 0.12.0)](https://github.com/koajs/koa)  
+[koa-bodyparser](https://github.com/koajs/bodyparser)
 
 # Usage
 
