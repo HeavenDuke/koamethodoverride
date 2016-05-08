@@ -9,34 +9,44 @@ module.exports = function () {
             return method.toUpperCase();
         });
 
-        var method = this.request.method;
-
-        // body support
-        var body = this.request.body;
-        if (body && body._method) {
-            method = body._method.toUpperCase();
-        }
-
-        // query support
-        var query = this.request.body;
-        if (query && query._method) {
-            method = query._method.toUpperCase();
-        }
+        var overriden_methods = [this.request.method];
 
         // header support
         var header = this.get('x-http-method-override');
         if (header) {
-            method = header.toUpperCase();
+            overriden_methods.push(header.toUpperCase());
+        }
+
+        // query support
+        var query = this.request.query;
+        if (query && query._method) {
+            overriden_methods.push(query._method.toUpperCase());
+        }
+
+        // body support
+        var body = this.request.body;
+        if (body && body._method) {
+            overriden_methods.push(body._method.toUpperCase());
         }
 
         // only allow supported methods
         // if the method don't match the following: GET POST PUT DELETE
         // this middleware will simply fail the override method and use the original request.method instead
-        if (methods.indexOf(method) === -1) {
-            method = this.request.method;
-        }
 
-        this.request.method = method;
+        var selected_method = null;
+        overriden_methods.map(function (method) {
+            if (methods.indexOf(method) !== -1) {
+                selected_method = method;
+            }
+            return method;
+        });
+
+        if (selected_method == null) {
+            this.throw(400, 'invalid request method.');
+        }
+        else {
+            this.request.method = selected_method;
+        }
         yield* next;
     };
 };

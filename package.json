@@ -23,5 +23,11 @@
   "homepage": "https://github.com/HeavenDuke/koamethodoverride#readme",
   "dependencies": {
     "methods": "^1.1.2"
+  },
+  "devDependencies": {
+    "koa": "latest",
+    "koa-bodyparser": "latest",
+    "mocha": "latest",
+    "supertest": "latest"
   }
 }
