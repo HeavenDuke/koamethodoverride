@@ -317,5 +317,23 @@ describe('koa method override middleware', function () {
         }).expect(200, done);
     });
 
+    it('patch should work too', function (done) {
+        var server = koa();
+        server.use(bodyParser());
+        server.use(override());
+        server.use(function *() {
+            this.body = {
+                method: this.method,
+                url: this.url
+            };
+        });
+
+        var test = request(server.listen());
+        var result = test.post('/test').set('x-http-method-override', 'patch');
+        result.expect({
+            method: 'PATCH',
+            url: '/test'
+        }).expect(200, done);
+    });
 
 });

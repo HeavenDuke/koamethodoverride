@@ -9,7 +9,7 @@ module.exports = function () {
             return method.toUpperCase();
         });
 
-        var overriden_methods = [this.request.method];
+        var overriden_methods = [];
 
         // header support
         var header = this.get('x-http-method-override');
@@ -41,10 +41,7 @@ module.exports = function () {
             return method;
         });
 
-        if (selected_method == null) {
-            this.throw(400, 'invalid request method.');
-        }
-        else {
+        if (selected_method != null) {
             this.request.method = selected_method;
         }
         yield* next;
