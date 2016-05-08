@@ -15,7 +15,13 @@ koamethodoverride
 Full method override for koajs, enabling developer to launch PUT/DELETE/GET/POST request from HTTP form or links.
 
 # Install
+
 npm install koamethodoverride
+
+# Dependencies
+
+Koa 2(Node >= 0.12.0)[https://github.com/koajs/koa]
+koa-bodyparser[https://github.com/koajs/bodyparser]
 
 # Usage
 
@@ -51,7 +57,7 @@ The middle ware will take 3 part of a request into consideration:
 *   request.query._method(from query string)
 *   "x-http-method-override" header(case sensitive)
 
-The override priority of above is request.body > request.query > "x-http-method-override" header.
+The priority of above is request.body > request.query > "x-http-method-override" header.
 
 If the override method from a higher priority level exists but the value is not within:
 
