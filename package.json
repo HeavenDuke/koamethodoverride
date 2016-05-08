@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/HeavenDuke/koamethodoverride#readme",
   "dependencies": {
-    "methods": "^1.1.2"
+    "methods": "~1.1.1"
   },
   "devDependencies": {
     "koa": "latest",

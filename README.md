@@ -1,4 +1,17 @@
-# koamethodoverride
+koamethodoverride
+=================
+
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![npm download][download-image]][download-url]
+
+[npm-image]: https://img.shields.io/npm/v/koamethodoverride.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/koamethodoverride
+[travis-image]: https://travis-ci.org/HeavenDuke/koamethodoverride.svg
+[travis-url]: https://travis-ci.org/HeavenDuke/koamethodoverride
+[download-image]: https://img.shields.io/npm/dm/koamethodoverride.svg?style=flat-square
+[download-url]: https://npmjs.org/package/koamethodoverride
+
 Full method override for koajs, enabling developer to launch PUT/DELETE/GET/POST request from HTTP form or links.
 
 # Install
